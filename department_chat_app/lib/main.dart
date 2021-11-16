@@ -1,7 +1,12 @@
+import 'package:camera/camera.dart';
 import 'package:department_chat_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'screens/camera_screen.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(const MyApp());
 }
 
